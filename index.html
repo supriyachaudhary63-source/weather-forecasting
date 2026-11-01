@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Nowcasting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>☁ Weather<span>Now</span></h2>
+    <p>Short-Term Weather Nowcasting</p>
+</header>
+
+<main>
+<section class="welcome">
+    <div>
+        <p>WEATHER MONITORING SYSTEM</p>
+        <h1>Weather Dashboard</h1>
+        <p>Real-time insights and short-term predictions</p>
+    </div>
+    <span class="live">● LIVE NOWCAST</span>
+</section>
+
+<section class="current">
+    <div>
+        <p>CURRENT TEMPERATURE</p>
+        <h1>28°C</h1>
+        <h3>Partly Cloudy ☁️</h3>
+    </div>
+    <div class="icon">🌤️</div>
+</section>
+
+<section class="metrics">
+
+    <div class="card">
+        <p>💧 Humidity</p>
+        <h2>65%</h2>
+    </div>
+
+    <div class="card">
+        <p>💨 Wind Speed</p>
+        <h2>12 km/h</h2>
+    </div>
+
+    <div class="card">
+        <p>🌧️ Rain Probability</p>
+        <h2>10%</h2>
+    </div>
+
+</section>
+
+<section class="chart">
+    <h2>Temperature Prediction</h2>
+    <p>Short-term forecast · Next 6 hours</p>
+
+    <div class="chart-area">
+        <canvas id="weatherChart"></canvas>
+    </div>
+
+<div class="legend">
+    <span>🔵 Predicted Temperature</span>
+    <span>▰ Confidence Interval</span>
+</div>
+
+<p class="chart-note">
+    The shaded region represents the uncertainty
+    range of predicted temperature.
+</p>
+</section>
+<section class="insights">
+
+    <h2>Forecast Insights</h2>
+    <p>Quick analysis of upcoming weather conditions</p>
+
+    <div class="insight-grid">
+
+        <div class="insight-card">
+            <span>🌡️ Peak Temperature</span>
+            <h2 id="peakTemp">31°C</h2>
+            <p>Expected maximum</p>
+        </div>
+
+        <div class="insight-card">
+            <span>📊 Temperature Range</span>
+            <h2 id="tempRange">28-31°C</h2>
+            <p>Next 6 hours</p>
+        </div>
+
+        <div class="insight-card">
+            <span>🎯 Prediction Uncertainty</span>
+            <h2 id="uncertainty">6°C</h2>
+            <p>Maximum interval width</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="scrubber">
+    <h2>Forecast Timeline</h2>
+    <p>Select a forecast hour</p>
+
+    <input type="range" id="timeSlider"
+           min="0" max="6" value="0">
+
+    <div class="time">
+        <span>Now</span>
+        <span>+3 Hours</span>
+        <span>+6 Hours</span>
+    </div>
+
+    <div class="selected">
+        <p>Selected Temperature</p>
+        <h2 id="selectedTemp">28°C</h2>
+        <p id="selectedHour">Now</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

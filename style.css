@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+background: #0b1220;
+color: #f8fafc;
+font-family: Arial, sans-serif;
+}
+
+header {
+background: #111c2e;
+padding: 22px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #26364d;
+}
+
+header span {
+color: #38bdf8;
+}
+
+header p, section p {
+color: #94a3b8;
+}
+
+main {
+max-width: 1200px;
+margin: auto;
+padding: 30px 20px;
+}
+
+.welcome {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+}
+
+.welcome h1 {
+margin: 12px 0;
+font-size: 30px;
+}
+
+.live {
+color: #38bdf8;
+background: #172c42;
+padding: 10px 15px;
+border-radius: 20px;
+font-size: 12px;
+}
+
+.current {
+background: linear-gradient(120deg, #164e75, #172b49);
+padding: 30px;
+border-radius: 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.current h1 {
+font-size: 55px;
+margin: 12px 0;
+}
+
+.icon {
+font-size: 65px;
+}
+
+.metrics {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+margin: 20px 0;
+}
+
+.card, .chart, .scrubber {
+background: #151f32;
+border: 1px solid #26364d;
+padding: 24px;
+border-radius: 14px;
+}
+
+.card h2 {
+color: #38bdf8;
+margin-top: 15px;
+}
+
+.chart h2, .scrubber h2 {
+margin-bottom: 10px;
+}
+
+.chart-area {
+height: 300px;
+margin-top: 20px;
+}
+
+#weatherChart {
+width: 100%;
+height: 100%;
+}
+
+.legend {
+display: flex;
+gap: 25px;
+color: #94a3b8;
+font-size: 13px;
+margin-top: 15px;
+}
+
+.scrubber {
+margin-top: 20px;
+}
+
+#timeSlider {
+width: 100%;
+margin: 30px 0 15px;
+accent-color: #38bdf8;
+cursor: pointer;
+}
+
+.time {
+display: flex;
+justify-content: space-between;
+color: #94a3b8;
+font-size: 12px;
+}
+
+.selected {
+background: #1d2b41;
+padding: 20px;
+border-radius: 10px;
+margin-top: 25px;
+}
+
+.selected h2 {
+color: #38bdf8;
+margin: 10px 0;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+color: #64748b;
+font-size: 13px;
+}
+
+/* Responsive design */
+
+@media(max-width: 768px) {
+.metrics {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media(max-width: 480px) {
+header {
+padding: 18px;
+gap: 10px;
+}
+
+header p {
+    font-size: 11px;
+}
+
+.welcome {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.metrics {
+    grid-template-columns: 1fr;
+}
+
+.current h1 {
+    font-size: 42px;
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.chart-area {
+    height: 230px;
+}
+
+.legend {
+    flex-direction: column;
+    gap: 10px;
+}
+}
+.scrubber {
+background: linear-gradient(145deg, #151f32, #192840);
+border: 1px solid #2b405c;
+padding: 28px;
+border-radius: 16px;
+}
+
+#timeSlider {
+appearance: none;
+width: 100%;
+height: 7px;
+border-radius: 10px;
+background: linear-gradient(to right, #38bdf8 0%, #38bdf8 0%, #334155 0%, #334155 100%);
+outline: none;
+}
+
+#timeSlider::-webkit-slider-thumb {
+appearance: none;
+width: 19px;
+height: 19px;
+border-radius: 50%;
+background: #38bdf8;
+border: 3px solid white;
+cursor: pointer;
+box-shadow: 0 0 12px #38bdf8;
+}
+
+#timeSlider::-moz-range-thumb {
+width: 14px;
+height: 14px;
+border-radius: 50%;
+background: #38bdf8;
+border: 3px solid white;
+cursor: pointer;
+}
+
+#timeSlider:focus-visible {
+outline: 2px solid #38bdf8;
+outline-offset: 6px;
+}
+
+.selected {
+border: 1px solid #2b405c;
+transition: 0.3s;
+}
+
+.selected:hover {
+border-color: #38bdf8;
+}
+@media (max-width: 600px) {
+
+    main {
+        padding: 15px 10px;
+    }
+
+    .current {
+        padding: 20px;
+    }
+
+    .card, .chart, .scrubber {
+        padding: 17px;
+    }
+
+    .chart-area {
+        height: 220px;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .time {
+        font-size: 10px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+}@media (max-width: 600px) {
+
+    main {
+        padding: 15px 10px;
+    }
+
+    .current {
+        padding: 20px;
+    }
+
+    .card, .chart, .scrubber {
+        padding: 17px;
+    }
+
+    .chart-area {
+        height: 220px;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .time {
+        font-size: 10px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+}
+
+body {
+font-family: 'Segoe UI', Arial, sans-serif;
+line-height: 1.5;
+background: radial-gradient(circle at top right, #142b46, #0b1220 45%);
+}
+
+header {
+position: sticky;
+top: 0;
+z-index: 100;
+backdrop-filter: blur(15px);
+background: rgba(17, 28, 46, 0.95);
+}
+
+section {
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card, .chart, .scrubber {
+box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.current {
+min-height: 200px;
+position: relative;
+overflow: hidden;
+background: linear-gradient(120deg, #164e75, #172b49);
+}
+
+.current::after {
+content: "";
+position: absolute;
+width: 220px;
+height: 220px;
+border-radius: 50%;
+background: rgba(56,189,248,0.08);
+right: 50px;
+top: -100px;
+}
+
+.current .icon {
+position: relative;
+z-index: 1;
+filter: drop-shadow(0 0 15px rgba(56,189,248,0.3));
+}
+
+.card {
+border: 1px solid #26364d;
+transition: 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+border-color: #38bdf8;
+box-shadow: 0 10px 25px rgba(56,189,248,0.10);
+}
+
+.card p {
+font-size: 14px;
+}
+
+.card h2 {
+font-size: 27px;
+}
+.chart {
+padding: 28px;
+border-color: #293c57;
+}
+
+.chart h2 {
+font-size: 22px;
+}
+
+.chart-area {
+margin-top: 30px;
+}
+
+.scrubber {
+border-color: #293c57;
+}
+
+.selected {
+background: linear-gradient(110deg, #1d2b41, #17283d);
+transition: 0.3s ease;
+}
+
+.selected:hover {
+border-color: #38bdf8;
+transform: translateY(-2px);
+}
+
+button, input {
+transition: 0.2s ease;
+}
+
+footer {
+letter-spacing: 0.5px;
+}
+#timeSlider:focus-visible {
+outline: 2px solid #38bdf8;
+outline-offset: 6px;
+}
+.chart-note {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 15px;
+}
+.insights {
+    margin-top: 22px;
+}
+
+.insights > p {
+    margin: 8px 0 18px;
+}
+
+.insight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.insight-card {
+    background: #151f32;
+    border: 1px solid #26364d;
+    border-radius: 14px;
+    padding: 24px;
+    transition: 0.3s;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.insight-card span {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.insight-card h2 {
+    color: #38bdf8;
+    margin: 15px 0 8px;
+    font-size: 27px;
+}
+
+.insight-card p {
+    font-size: 12px;
+}
+
+@media(max-width: 768px) {
+    .insight-grid {
+        grid-template-columns: 1fr;
+    }
+}
